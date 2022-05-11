@@ -12,7 +12,7 @@ const createSuperAdmin = async (req, res) => {
     try {
         await superAdminService.create(superAdmin);
         res.status(201).json({
-            message: "Admin Created",
+            message: "SuperAdmin Created",
             data: superAdmin,
         });
     } catch (error) {
