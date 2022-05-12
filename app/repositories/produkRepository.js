@@ -22,7 +22,7 @@ module.exports = {
             name: produk.name,
             created_by: produk.createdBy,
             deleted_by: null,
-            last_updated_by: produk.createdBy,
+            updated_by: produk.createdBy,
             createdAt: new Date(),
             updatedAt: new Date(),
         });
@@ -36,7 +36,7 @@ module.exports = {
             if (!updatedProduk) return res.status(404).send();
             updatedProduk.update({
                 name: produk.name,
-                last_updated_by: produk.updatedBy,
+                updated_by: produk.updatedBy,
                 updatedAt: new Date(),
             });
         });

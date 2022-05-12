@@ -38,6 +38,7 @@ const deleteProduk = async (req, res) => {
         await produkService.deleteById(produk);
         res.status(200).json({
             message: "Produk deleted",
+            data: produk,
         });
     } catch (error) {
         res.status(400).send(error);
